@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel de Monitoreo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="js.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>🖥️ Dashboard de Servidores</h1>
+    <p>Monitorea el rendimiento de tus sistemas Linux en tiempo real</p>
+  </section>
+
+  <!-- MÉTRICAS PRINCIPALES -->
+  <section class="metricas">
+    <div class="cuadro">
+      <h3>🧠 CPU</h3>
+      <p id="cpu">Cargando...</p>
+    </div>
+    <div class="cuadro">
+      <h3>💾 RAM</h3>
+      <p id="ram">Cargando...</p>
+    </div>
+    <div class="cuadro">
+      <h3>🗃️ Disco</h3>
+      <p id="disk">Cargando...</p>
+    </div>
+    <div class="cuadro">
+      <h3>🌐 Red</h3>
+      <p id="net">Cargando...</p>
+    </div>
+  </section>
+
+  <!-- GRÁFICO DE CARGA -->
+  <section class="grafico">
+    <h2>Carga del sistema</h2>
+    <canvas id="chart"></canvas>
+  </section>
+
+  <!-- LOGS O PROCESOS -->
+  <section class="logs">
+    <h2>Últimos procesos</h2>
+    <pre id="logs">Esperando datos...</pre>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Hecho por Jahir — Panel minimalista ☑️</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

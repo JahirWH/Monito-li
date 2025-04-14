@@ -1,0 +1,99 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111111;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* MÉTRICAS */
+.metricas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.cuadro {
+  flex: 1 1 200px;
+  background-color: #fafafa;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.cuadro h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.cuadro p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3c8bf0;
+}
+
+/* GRAFICO */
+.grafico {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.grafico h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+canvas {
+  max-width: 100%;
+}
+
+/* LOGS */
+.logs {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  margin-bottom: 40px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
