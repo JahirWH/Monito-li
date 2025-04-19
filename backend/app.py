@@ -1,7 +1,9 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 import psutil
 
 app = Flask(__name__)
+CORS(app)  # permite conexión desde cualquier origen (tu HTML local)
 
 @app.route("/api/metrics")
 def metrics():
