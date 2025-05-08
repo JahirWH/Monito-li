@@ -1,8 +1,9 @@
 async function obtenerDatosSistema() {
   try {
-    const res = await fetch("http://localhost:5000/api/metrics");
+    const res = await fetch("http://127.0.0.1:5000/api/metrics");
     const data = await res.json();
 
+    document.getElementById('name').textContent = data.name + 'Name';
     document.getElementById('cpu').textContent = data.cpu + '%';
     document.getElementById('ram').textContent = data.ram + '%';
     document.getElementById('disk').textContent = data.disk + '%';
@@ -15,3 +16,6 @@ async function obtenerDatosSistema() {
 }
 
 setInterval(obtenerDatosSistema, 3000); // Llamar cada 3 segundos
+
+
+cre
