@@ -6,71 +6,88 @@
 }
 
 body {
-  background-color: #ffffff;
-  color: #111111;
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  padding: 20px;
+  background: linear-gradient(135deg, #18181b 0%, #23272f 100%);
+  color: #f1f1f1;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 40px 20px;
-  background: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  margin-bottom: 30px;
+  padding: 2rem 1rem 1rem 1rem;
+  background: rgba(24, 24, 27, 0.95);
+  border-bottom: 1px solid #23272f;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin: 0 0 0.5rem 0;
+  color: #7f5af0;
+  letter-spacing: 1px;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  color: #444;
+  color: #a1a1aa;
+  font-size: 1.1rem;
 }
 
 /* MÉTRICAS */
 .metricas {
   display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0 1rem 0;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  margin-bottom: 40px;
 }
 
 .cuadro {
-  flex: 1 1 200px;
-  background-color: #fafafa;
-  border: 1.5px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
+  background: #23272f;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px 0 #000a;
+  padding: 2rem 2.5rem;
+  min-width: 160px;
   text-align: center;
-  transition: 0.3s ease;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #2a2a2e;
+}
+
+.cuadro:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 32px 0 #000c;
 }
 
 .cuadro h3 {
+  margin: 0 0 0.5rem 0;
+  color: #7f5af0;
   font-size: 1.2rem;
-  margin-bottom: 10px;
 }
 
 .cuadro p {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin: 0;
+  color: #f1f1f1;
   font-weight: bold;
-  color: #3c8bf0;
+  letter-spacing: 1px;
 }
 
 /* GRAFICO */
 .grafico {
-  margin-bottom: 40px;
-  text-align: center;
+  background: #18181b;
+  margin: 2rem auto 1rem auto;
+  padding: 2rem 1rem 1.5rem 1rem;
+  border-radius: 1rem;
+  max-width: 600px;
+  box-shadow: 0 2px 16px 0 #000a;
+  border: 1px solid #23272f;
 }
 
 .grafico h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  color: #7f5af0;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 canvas {
@@ -79,21 +96,51 @@ canvas {
 
 /* LOGS */
 .logs {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  padding: 20px;
-  font-family: monospace;
-  font-size: 0.9rem;
+  background: #23272f;
+  margin: 2rem auto 1rem auto;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  max-width: 600px;
+  box-shadow: 0 2px 16px 0 #000a;
+  border: 1px solid #2a2a2e;
+}
+
+.logs h2 {
+  color: #7f5af0;
+  margin-bottom: 0.5rem;
+}
+
+#logs {
+  background: #18181b;
+  color: #a1a1aa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 1rem;
   overflow-x: auto;
-  white-space: pre-wrap;
-  margin-bottom: 40px;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
+  padding: 1.5rem 0 1rem 0;
+  color: #a1a1aa;
+  font-size: 1rem;
+  background: transparent;
+}
+
+@media (max-width: 800px) {
+  .metricas {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .grafico, .logs {
+    max-width: 98vw;
+    padding: 1rem 0.5rem;
+  }
+  .cuadro {
+    min-width: 120px;
+    padding: 1.2rem 1rem;
+  }
 }
